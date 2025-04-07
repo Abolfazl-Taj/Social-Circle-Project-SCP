@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+body {
+    @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full h-[100vh]
+}
+
+.active {
+    @apply bg-slate-500 text-white py-2
+}
