@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-    @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full h-[100vh]
+    @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full 
 }
 
 .active {
