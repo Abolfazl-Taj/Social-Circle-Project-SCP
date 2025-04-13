@@ -19,7 +19,7 @@ const DropDown = ({
     const mockInput = {
       target: {
         name,
-        value: item.icon,
+        value: item,
       },
     };
     formAction(mockInput);

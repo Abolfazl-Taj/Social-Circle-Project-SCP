@@ -1,7 +1,11 @@
 @import "tailwindcss";
+html,
+body {
+    font-family: 'Inter', sans-serif;
+}
 
 body {
-    @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full 
+    @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full
 }
 
 .active {
