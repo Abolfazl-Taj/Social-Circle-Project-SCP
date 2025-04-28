@@ -6,11 +6,13 @@ import { IoMdArrowDropdown } from "react-icons/io";
 const DropDown = ({
   data,
   formAction,
-  name = "status", // optional default name
+  name = "status", // optional default name,
+  lablelText = "Please Selec a Status"
 }: {
   data: Status[];
   formAction: (e: any) => void;
   name?: string;
+  lablelText?: string
 }) => {
   const [isOpen, setIsopen] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState<Status | null>(null);
@@ -38,10 +40,9 @@ const DropDown = ({
     <div
       onClick={() => setIsopen(!isOpen)}
       className={`my-4 w-full outline-noone border border-slate-700 rounded shadow-2xl overflow-hidden transition-all duration-700 ease-in-out
-        ${
-          isOpen
-            ? "max-h-[600px] px-4 py-6"
-            : selectedStatus
+        ${isOpen
+          ? "max-h-[600px] px-4 py-6"
+          : selectedStatus
             ? "max-h-[140px] px-4 py-6"
             : "max-h-[50px] "
         }`}
@@ -55,9 +56,8 @@ const DropDown = ({
             >
               Value Selected
               <span
-                className={`text-2xl transition-all duration-700 ease-in-out ${
-                  isOpen ? "rotate-180" : ""
-                }`}
+                className={`text-2xl transition-all duration-700 ease-in-out ${isOpen ? "rotate-180" : ""
+                  }`}
               >
                 <IoMdArrowDropdown />
               </span>
@@ -67,9 +67,9 @@ const DropDown = ({
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center">
-                <i className="mx-1 text-[50px]">
+                {typeof selectedStatus.icon === "string" ? <img className="mx-1 w-14" src={selectedStatus.icon} alt={selectedStatus.text} /> : <i className="mx-1 text-[50px]">
                   <selectedStatus.icon />
-                </i>
+                </i>}
                 <p>{selectedStatus.text}</p>
               </div>
               <div
@@ -83,11 +83,10 @@ const DropDown = ({
         )}
         {!selectedStatus && (
           <p className="text-slate-400 font-medium my-3 w-full  text-center flex items-center justify-center">
-            Please Select A Status
+            {lablelText}
             <span
-              className={`text-2xl transition-all duration-700 ease-in-out ${
-                isOpen ? "rotate-180" : ""
-              }`}
+              className={`text-2xl transition-all duration-700 ease-in-out ${isOpen ? "rotate-180" : ""
+                }`}
             >
               <IoMdArrowDropdown />
             </span>
@@ -101,9 +100,9 @@ const DropDown = ({
           key={item.id}
           onClick={(e) => SelectHandler(e, item)}
         >
-          <i className="mx-1 text-[50px]">
+          {typeof item.icon === "string" ? <img className="mx-1 w-15" src={item.icon} alt={item.text} /> : <i className="mx-1 text-[50px]">
             <item.icon />
-          </i>
+          </i>}
           <p>{item.text}</p>
         </div>
       ))}

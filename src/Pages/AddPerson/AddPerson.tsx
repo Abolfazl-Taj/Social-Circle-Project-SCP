@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 import Status_Data from "../../Assets/Data/Status_Data";
 import DropDown from "../../Components/Custom/DropDown";
+import Personality_Data from "../../Assets/Data/Personality_Data";
 
 const AddPerson = () => {
   const nav = useNavigate();
@@ -15,7 +16,7 @@ const AddPerson = () => {
       formData: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
       const { name, value } = formData.target;
-      console.log(name , value);
+      console.log(name, value);
       return {
         ...prevdata,
         [name]: value,
@@ -52,7 +53,7 @@ const AddPerson = () => {
             <CreateInput
               onblur={formAction}
               className="w-full"
-              labelname="Brith Day"
+              labelname="Age"
               name="Brith_Day"
             />
           </div>
@@ -65,6 +66,7 @@ const AddPerson = () => {
           />
 
           <DropDown data={Status_Data} formAction={formAction} name="Status" />
+          <DropDown data={Personality_Data} lablelText="Please Select Personality Type" formAction={formAction} name="personality" />
 
           <button
             onClick={NewPersonHandler}

@@ -6,7 +6,7 @@ import { IoGameControllerOutline } from "react-icons/io5";
 
 export interface Status {
   id: number;
-  icon: ElementType;
+  icon: ElementType | string;
   text: string;
 }
 

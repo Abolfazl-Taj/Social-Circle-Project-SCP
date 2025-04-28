@@ -1,23 +1,18 @@
 {
   "person": [
     {
-      "id": "b073",
-      "Full_Name": "Sepideh Fazelzadeh",
-      "Brith_Day": "23",
-      "Description": "",
+      "id": "02a5",
+      "Full_Name": "Abolfazl Taj",
+      "Brith_Day": "20",
+      "Description": "a godlike programmer with ambisouse goals ",
       "Status": {
-        "id": 2,
-        "text": "Co Worker"
-      }
-    },
-    {
-      "id": "1aa6",
-      "Full_Name": "Keyvan Abolfazli",
-      "Brith_Day": "40",
-      "Description": "My current hr in ernyka company and he look like nice guy who inside is an absolute monster but hey i dont complain about it , he is bald , big o ass beard ",
-      "Status": {
-        "id": 2,
-        "text": "Co Worker"
+        "id": 1,
+        "text": "Friend"
+      },
+      "personality": {
+        "id": 1,
+        "text": "Intervort",
+        "icon": "/src/Assets/Img/Think.png"
       }
     }
   ]

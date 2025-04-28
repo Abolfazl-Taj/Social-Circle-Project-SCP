@@ -1,52 +1,69 @@
+import { GiEvilLove, GiDevilMask, GiMuscularTorso } from "react-icons/gi";
+import { MdOutlineHandshake } from "react-icons/md";
+import { PiStudentFill } from "react-icons/pi";
+import { IoGameControllerOutline } from "react-icons/io5";
 import { Status } from "../../../Assets/Data/Status_Data";
+import { JSX } from "react";
 
 export interface person {
-  id: string;
+  id?: string;
   Full_Name: string;
   Brith_Day: string;
   Description: string;
   Status: Status;
+  personality: Status;
 }
 
-const Person = ({ id, Full_Name, Brith_Day, Description, Status }: person) => {
+const statusIconMap: Record<string, JSX.Element> = {
+  "Student Mate": <PiStudentFill className="text-yellow-400 text-3xl transition-all hover:scale-125 hover:text-yellow-500" />,
+  "Friend": <GiMuscularTorso className="text-green-500 text-3xl transition-all hover:scale-125 hover:text-green-600" />,
+  "Co Worker": <MdOutlineHandshake className="text-blue-400 text-3xl transition-all hover:scale-125 hover:text-blue-500" />,
+  "Enemy": <GiDevilMask className="text-red-600 text-3xl transition-all hover:scale-125 hover:text-red-700" />,
+  "Girl Friend": <GiEvilLove className="text-pink-500 text-3xl transition-all hover:scale-125 hover:text-pink-600" />,
+  "Game Mate": <IoGameControllerOutline className="text-purple-400 text-3xl transition-all hover:scale-125 hover:text-purple-500" />,
+};
+
+const Person = ({ Full_Name, Brith_Day, Description, Status, personality }: person) => {
+  const Icon = statusIconMap[Status.text] ?? null;
+
   return (
-    <div
-      className="w-1/2 bg-gradient-to-br from-slate-400 to-slate-500 px-2 py-8 mx-4 rounded-xl shadow flex flex-col justify-center items-center"
-      key={id}
-    >
-      {/* Heading with Playfair Display font */}
-      <h1 className="w-full flex items-center font-serif my-4 py-1 px-4 text-xl border-b justify-start text-slate-800 shadow border-slate-400">
-        <span>Name:</span>
-        <span className="ml-2">{Full_Name}</span>
-      </h1>
-
-      <div className="px-2 w-full my-3 font-medium">
-        <div className="px-2 py-3 flex w-full flex-col space-y-3 bg-slate-900 rounded-2xl shadow shadow-[#111] gap-0.5">
-          {/* Birthday with Playfair Display font */}
-          <h2 className="w-full flex items-center justify-between border-b py-2 px-1 border-slate-950">
-            <span>Brith Day :</span>
-            <span className="text-slate-100 font-medium">
-              {new Date().getFullYear() - Number(Brith_Day)} ({Brith_Day})
-            </span>
-          </h2>
-
-          {/* Description with Inter font */}
-          <p className="w-full flex flex-col justify-start items-start border-b py-2 px-1 border-slate-950">
-            <span>Description:</span>
-            <p className="leading-9 text-justify text-slate-100 font-medium font-sans">
-              {Description}
-            </p>
-          </p>
-
-          {/* Status with Inter font */}
-          <span className="w-full flex items-center border-b py-2 px-1 border-slate-950">
-            <span>Status:</span>
-            <span className="text-slate-100 ml-2 font-medium font-sans">
-              {Status.text}
-            </span>
-          </span>
-        </div>
+    <div className="bg-slate-800/70 border border-slate-600 rounded-2xl p-6 shadow-lg transition-transform hover:shadow-blue-900 hover:scale-[1.02] duration-300">
+      <div className="flex items-center justify-between">
+        <h2 className="text-white font-extrabold text-2xl border-b border-slate-600 pb-2">
+          {Full_Name}
+        </h2>
+        <div className="text-lg text-slate-300">{Brith_Day} Years Old</div>
       </div>
+
+      <section className="mt-4">
+        <h4 className="text-[#f1f1f1] font-semibold text-lg mb-1">About This Person:</h4>
+        <p className="text-slate-300 leading-relaxed tracking-wide text-justify">{Description}</p>
+      </section>
+
+      <section className="mt-4 bg-blue-700/30 rounded-xl py-2 px-4 text-center text-blue-300 font-semibold shadow-inner">
+        <p>This person Born in <span className="text-white">{new Date().getFullYear() - Brith_Day}</span> </p>
+      </section>
+
+      <section className="mt-4">
+        <h4 className="text-white font-semibold mb-1">My Status With This Person</h4>
+        <div className="flex items-center gap-3 bg-slate-700/40 rounded-md px-3 py-2 transition-all hover:bg-slate-600">
+          {Icon}
+          <span className="text-slate-100 font-medium">{Status.text}</span>
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center my-1">
+        <h1 className="border-b py-1 text-white border-blue-700 w-full text-center my-1">Personality Attributes</h1>
+        <section className="my-1 w-full flex flex-col items-start gap-y-1">
+          <h4>Energy</h4>
+          <div className="flex items-center my-1">
+            <img className="w-8 mx-1 object-contain" src={personality?.icon} alt="energy icon" />
+            <span className="bg-blue-700/40 py-[2px] px-4 rounded-full text-white font-bold">
+              {personality?.text || "Not Defined"}
+            </span>
+          </div>
+        </section>
+      </section>
     </div>
   );
 };
