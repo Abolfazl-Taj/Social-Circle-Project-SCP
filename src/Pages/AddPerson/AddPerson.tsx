@@ -7,6 +7,8 @@ import { useNavigate } from "react-router";
 import Status_Data from "../../Assets/Data/Status_Data";
 import DropDown from "../../Components/Custom/DropDown";
 import Personality_Data from "../../Assets/Data/Personality_Data";
+import AddAtr from "../../Components/Parts/AddAtr/AddAtr";
+import AddNew from "../../Components/Parts/AddNew/AddNew";
 
 const AddPerson = () => {
   const nav = useNavigate();
@@ -67,7 +69,8 @@ const AddPerson = () => {
 
           <DropDown data={Status_Data} formAction={formAction} name="Status" />
           <DropDown data={Personality_Data} lablelText="Please Select Personality Type" formAction={formAction} name="personality" />
-
+          <AddAtr formAction={formAction} />
+          <AddNew formAction={formAction} />
           <button
             onClick={NewPersonHandler}
             disabled={ispending}

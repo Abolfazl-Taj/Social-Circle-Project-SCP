@@ -4,6 +4,7 @@ import { Bounce, ToastContainer } from 'react-toastify';
 import './index.css'
 import App from './App.tsx'
 import { BrowserRouter as Router } from 'react-router'
+import { OpenProvider } from './Context/UseOpen.tsx';
 createRoot(document.getElementById('root')!).render(
   <Router>
     <ToastContainer
@@ -19,8 +20,10 @@ createRoot(document.getElementById('root')!).render(
       theme="light"
       transition={Bounce}
     />
-    <StrictMode>
-      <App />
-    </StrictMode>
+    <OpenProvider>
+      <StrictMode>
+        <App />
+      </StrictMode>
+    </OpenProvider>
   </Router>
 )

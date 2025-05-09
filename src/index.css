@@ -9,5 +9,5 @@ body {
 }
 
 .active {
-    @apply bg-slate-500 text-white py-2
+    @apply bg-slate-900 text-white py-2
 }

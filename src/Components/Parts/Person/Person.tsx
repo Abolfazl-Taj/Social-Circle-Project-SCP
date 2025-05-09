@@ -12,6 +12,7 @@ export interface person {
   Description: string;
   Status: Status;
   personality: Status;
+  traits: string[]
 }
 
 const statusIconMap: Record<string, JSX.Element> = {
@@ -23,7 +24,7 @@ const statusIconMap: Record<string, JSX.Element> = {
   "Game Mate": <IoGameControllerOutline className="text-purple-400 text-3xl transition-all hover:scale-125 hover:text-purple-500" />,
 };
 
-const Person = ({ Full_Name, Brith_Day, Description, Status, personality }: person) => {
+const Person = ({ Full_Name, Brith_Day, Description, Status, personality, traits }: person) => {
   const Icon = statusIconMap[Status.text] ?? null;
 
   return (
@@ -33,6 +34,7 @@ const Person = ({ Full_Name, Brith_Day, Description, Status, personality }: pers
           {Full_Name}
         </h2>
         <div className="text-lg text-slate-300">{Brith_Day} Years Old</div>
+
       </div>
 
       <section className="mt-4">
@@ -62,6 +64,15 @@ const Person = ({ Full_Name, Brith_Day, Description, Status, personality }: pers
               {personality?.text || "Not Defined"}
             </span>
           </div>
+          <h4>Traits</h4>
+          <ul className="flex flex-wrap gap-2 mt-2">
+            {traits?.map(trait => (
+              <li
+                className="bg-slate-700 text-white font-medium px-4 py-1 rounded-full shadow border border-blue-800/30 hover:border-blue-500/60 hover:shadow-blue-500/20 transition-all duration-200 cursor-default"
+                key={trait}
+              >{trait}</li>
+            ))}
+          </ul>
         </section>
       </section>
     </div>

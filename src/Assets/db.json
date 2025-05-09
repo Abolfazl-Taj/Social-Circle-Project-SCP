@@ -1,10 +1,12 @@
 {
   "person": [
     {
-      "id": "02a5",
-      "Full_Name": "Abolfazl Taj",
+      "id": "c407",
+      "traits": [],
+      "news": [],
+      "Full_Name": "Abolfazl",
       "Brith_Day": "20",
-      "Description": "a godlike programmer with ambisouse goals ",
+      "Description": "qweweweaweaaee",
       "Status": {
         "id": 1,
         "text": "Friend"
