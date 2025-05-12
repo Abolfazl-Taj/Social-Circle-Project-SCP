@@ -9,10 +9,10 @@ const SideBar = memo(() => {
 
     return (
 <div
-  className={`py-6 shadow-lg bg-slate-700/20 relative h-screen 
+  className={`py-6 relative h-screen bg-gradient-to-b slate-700 to-slate-950
   ${isOpen ? 
     "w-[350px] opacity-100 translate-x-0 scale-100 shadow-2xl rounded-[8px]" : 
-    "w-[80px] opacity-90 translate-x-2 scale-90 rounded-full"
+    "w-[100px] opacity-90 translate-x-8 scale-90 rounded-full shadow-2xl border border-slate-950/90 "
   } 
   transition-[width,opacity,transform,box-shadow] duration-500 ease-out`}
 >
@@ -47,7 +47,7 @@ const SideBar = memo(() => {
                                     {Item.text}
                                 </p>
                             ) : (
-                                <p className={`absolute opacity-0 group-hover:opacity-100 group-hover:translate-x-[9rem] w-[190px] bg-blue-500 text-center rounded-full px-4 py-2 text-white font-bold transition-all ease-in-out duration-500`}>
+                                <p className={`absolute opacity-0 group-hover:opacity-100 group-hover:translate-x-[9rem] w-[190px] bg-blue-500/40 shadow-2xl border border-slate-950 text-center rounded-full px-4 py-2 text-white font-bold transition-all ease-in-out duration-500`}>
                                     {Item.text}
                                 </p>
                             )}

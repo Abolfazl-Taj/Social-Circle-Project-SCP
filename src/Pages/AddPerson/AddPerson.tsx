@@ -1,4 +1,4 @@
-import React, { useActionState, useCallback } from "react";
+import React, { useActionState, useCallback, useEffect, useRef } from "react";
 import Continer from "../../Components/Custom/Continer";
 import CreateInput from "../../Components/Custom/CreateInput";
 import axios from "axios";
@@ -11,6 +11,7 @@ import AddAtr from "../../Components/Parts/AddAtr/AddAtr";
 import AddNew from "../../Components/Parts/AddNew/AddNew";
 
 const AddPerson = () => {
+  const AddNewPerson = useRef<HTMLButtonElement>(null)
   const nav = useNavigate();
   const [state, formAction, ispending] = useActionState(
     (
@@ -37,7 +38,14 @@ const AddPerson = () => {
     },
     [state, nav]
   );
-
+  // useEffect(() => {
+  //   const handleKeyDown = (e: KeyboardEvent) => {
+  //     if (e.key === "Enter")
+  //       AddNewPerson?.current?.click()
+  //   }
+  //   document.addEventListener("keydown", handleKeyDown)
+  //   return () => document.removeEventListener("keydown", handleKeyDown)
+  // }, [AddNewPerson])
   return (
     <Continer>
       <div className="shadow-2xl shadow-slate-950 px-6 py-5 rounded ">
@@ -75,6 +83,7 @@ const AddPerson = () => {
             onClick={NewPersonHandler}
             disabled={ispending}
             type="button"
+            ref={AddNewPerson}
             className="cursor-pointer bg-slate-800 px-6 py-2 rounded  shadow-2xl shadow-slate-900 hover:text-slate-50 hover:bg-slate-700 transition-all"
           >
             Add New Person
