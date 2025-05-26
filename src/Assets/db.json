@@ -1,15 +1,18 @@
 {
   "person": [
     {
-      "id": "c407",
-      "traits": [],
+      "id": "c471",
+      "traits": [
+        "sus",
+        "trash"
+      ],
       "news": [],
-      "Full_Name": "Abolfazl",
+      "Full_Name": "Romina",
       "Brith_Day": "20",
-      "Description": "qweweweaweaaee",
+      "Description": "just a fucking test",
       "Status": {
-        "id": 1,
-        "text": "Friend"
+        "id": 3,
+        "text": "Student Mate"
       },
       "personality": {
         "id": 1,

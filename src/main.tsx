@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import { BrowserRouter as Router } from 'react-router'
 import { OpenProvider } from './Context/UseOpen.tsx';
+import PeopleContextProvider from './Context/PeopleContext.tsx';
 createRoot(document.getElementById('root')!).render(
   <Router>
     <ToastContainer
@@ -20,10 +21,12 @@ createRoot(document.getElementById('root')!).render(
       theme="light"
       transition={Bounce}
     />
-    <OpenProvider>
-      <StrictMode>
-        <App />
-      </StrictMode>
-    </OpenProvider>
+    <PeopleContextProvider>
+      <OpenProvider>
+        <StrictMode>
+          <App />
+        </StrictMode>
+      </OpenProvider>
+    </PeopleContextProvider>
   </Router>
 )

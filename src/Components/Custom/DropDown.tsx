@@ -6,7 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 const DropDown = ({
   data,
   formAction,
-  name = "status", // optional default name,
+  name = "status",
   lablelText = "Please Selec a Status"
 }: {
   data: Status[];

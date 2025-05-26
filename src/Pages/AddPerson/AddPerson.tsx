@@ -38,14 +38,6 @@ const AddPerson = () => {
     },
     [state, nav]
   );
-  // useEffect(() => {
-  //   const handleKeyDown = (e: KeyboardEvent) => {
-  //     if (e.key === "Enter")
-  //       AddNewPerson?.current?.click()
-  //   }
-  //   document.addEventListener("keydown", handleKeyDown)
-  //   return () => document.removeEventListener("keydown", handleKeyDown)
-  // }, [AddNewPerson])
   return (
     <Continer>
       <div className="shadow-2xl shadow-slate-950 px-6 py-5 rounded ">

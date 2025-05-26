@@ -4,6 +4,8 @@ import { PiStudentFill } from "react-icons/pi";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { Status } from "../../../Assets/Data/Status_Data";
 import { JSX } from "react";
+import { Link } from "react-router";
+import { FiEdit } from "react-icons/fi";
 
 export interface person {
   id?: string;
@@ -24,7 +26,7 @@ const statusIconMap: Record<string, JSX.Element> = {
   "Game Mate": <IoGameControllerOutline className="text-purple-400 text-3xl transition-all hover:scale-125 hover:text-purple-500" />,
 };
 
-const Person = ({ Full_Name, Brith_Day, Description, Status, personality, traits }: person) => {
+const Person = ({ id, Full_Name, Brith_Day, Description, Status, personality, traits }: person) => {
   const Icon = statusIconMap[Status.text] ?? null;
 
   return (
@@ -75,6 +77,10 @@ const Person = ({ Full_Name, Brith_Day, Description, Status, personality, traits
           </ul>
         </section>
       </section>
+      <Link className="flex items-center gap-x-2 bg-slate-700 transition-all ease-in-out hover:bg-slate-800 shadow-2xl my-2 text-white font-bold  py-2 px-4 rounded-2xl" to={`edit-person/${id}`}>
+      <span>Edit {Full_Name}</span>
+      <i className="text-[18px]"><FiEdit/></i>
+      </Link>
     </div>
   );
 };
