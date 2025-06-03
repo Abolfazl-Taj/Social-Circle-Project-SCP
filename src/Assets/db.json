@@ -1,15 +1,29 @@
 {
   "person": [
     {
-      "id": "c471",
+      "id": "9605",
       "traits": [
-        "sus",
-        "trash"
+        "Book Reader",
+        "Multi Tasker",
+        "Swearer",
+        "classic outfit ?",
+        "team manger ?"
       ],
-      "news": [],
-      "Full_Name": "Romina",
+      "news": [
+        {
+          "id": 1,
+          "news": "She is trying to make new contract for one the student for their something maybe product ? or some company",
+          "date": "2025-06-03"
+        },
+        {
+          "id": 2,
+          "news": "bought books at the book festival",
+          "date": "2025-06-03"
+        }
+      ],
+      "Full_Name": "Romina ",
       "Brith_Day": "20",
-      "Description": "just a fucking test",
+      "Description": "a girl in my university looking a bit srs and like book reading adding for test and might go for further friendship ",
       "Status": {
         "id": 3,
         "text": "Student Mate"

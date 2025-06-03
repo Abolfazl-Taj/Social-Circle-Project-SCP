@@ -37,9 +37,9 @@ const AddNew = ({ formAction }) => {
         if (!newText.trim()) return;
 
         const newItem = {
-            id: Date.now(),
+            id: news.length + 1,
             news: newText.trim(),
-            date: new Date().toISOString(),
+            date: new Date().toISOString().split('T')[0],
         };
 
         setNews([...news, newItem]);

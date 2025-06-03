@@ -1,10 +1,13 @@
 @import "tailwindcss";
 html,
-body {
-    font-family: 'Inter', sans-serif;
+@font-face {
+    font-family: 'Inter';
+    src: url('./Assets/Fonts/Inter.ttf');
 }
 
+
 body {
+    font-family: sans-serif;
     @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full
 }
 
