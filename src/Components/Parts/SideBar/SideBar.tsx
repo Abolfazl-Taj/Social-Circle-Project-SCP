@@ -2,20 +2,20 @@ import { NavLink } from "react-router"
 import SideBar_Data from "../../../Assets/Data/SideBar_Data"
 import { RiCloseLargeLine, RiMenu2Fill } from "react-icons/ri"
 import { memo } from "react"
-import useOpen from "../../../Context/UseOpen"
+import useOpen from "../../../Hooks/useOpen"
 
 const SideBar = memo(() => {
     const { isOpen, setIsOpen } = useOpen()
 
     return (
-<div
-  className={`py-6 relative h-screen bg-gradient-to-b slate-700 to-slate-950
-  ${isOpen ? 
-    "w-[350px] opacity-100 translate-x-0 scale-100 shadow-2xl rounded-[8px]" : 
-    "w-[100px] opacity-90 translate-x-8 scale-90 rounded-full shadow-2xl border border-slate-950/90 "
-  } 
+        <div
+            className={`py-6 relative h-screen bg-gradient-to-b slate-700 to-slate-950
+  ${isOpen ?
+                    "w-[350px] opacity-100 translate-x-0 scale-100 shadow-2xl rounded-[8px]" :
+                    "w-[100px] opacity-90 translate-x-8 scale-90 rounded-full shadow-2xl border border-slate-950/90 "
+                } 
   transition-[width,opacity,transform,box-shadow] duration-500 ease-out`}
->
+        >
             {/* Toggle buttons for open/close */}
             <button
                 onClick={() => setIsOpen(!isOpen)}

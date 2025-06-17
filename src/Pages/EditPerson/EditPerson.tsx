@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import Continer from "../../Components/Custom/Continer"
-import { usePeople } from "../../Context/PeopleContext"
+import { usePeople } from "../../Hooks/usePeople"
 import { useActionState, useEffect, useRef, useState } from "react"
 import DropDown from "../../Components/Custom/DropDown"
 import Status_Data from "../../Assets/Data/Status_Data"

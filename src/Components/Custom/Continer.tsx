@@ -1,7 +1,7 @@
 import { memo, ReactNode } from "react"
 import SideBar from "../Parts/SideBar/SideBar"
 import { motion } from "framer-motion";
-import useOpen from "../../Context/UseOpen";
+import useOpen from "../../Hooks/useOpen";
 
 const Continer = memo(({ children, className = "" }: {
     children?: ReactNode,

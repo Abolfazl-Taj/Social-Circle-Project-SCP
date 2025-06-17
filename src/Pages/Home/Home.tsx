@@ -1,13 +1,14 @@
 import Continer from "../../Components/Custom/Continer";
-import Person, { person } from "../../Components/Parts/Person/Person";
+import Person from "../../Components/Parts/Person/Person";
 import Nodatapic from '../../Assets/Img/Nodata.png'
 import { Link } from "react-router";
-import { usePeople } from "../../Context/PeopleContext";
+import { usePeople } from "../../Hooks/usePeople";
 import Search from "../../Components/Parts/Search/Search";
 import { useEffect, useState } from "react";
+import personType from "../../Types/Person";
 const Home = () => {
   const { people } = usePeople()
-  const [filteredPeople, setFilteredPeople] = useState([])
+  const [filteredPeople, setFilteredPeople] = useState<personType[]>([])
   useEffect(() => {
     setFilteredPeople(people);
   }, [people]);
@@ -15,9 +16,9 @@ const Home = () => {
     <Continer>
       <div className="my-4 font-bold bg-slate-800/40 border border-slate-950/40 px-5 py-10 rounded shadow flex flex-col w-full min-h-[400px] animate-in fade-in zoom-in">
         <Search setFilteredPeople={setFilteredPeople} />
-        <div className="grid gap-x-4 gap-y-6 grid-cols-3 my-2">
+        <div className="flex gap-4 items-stretch justify-center my-2 w-full flex-wrap">
           {filteredPeople.length > 0 ? (
-            filteredPeople.map((person: person) => (
+            filteredPeople.map((person: personType) => (
               <Person key={person.id} {...person} />
             ))
           ) : (

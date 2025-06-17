@@ -4,8 +4,8 @@ import { Bounce, ToastContainer } from 'react-toastify';
 import './index.css'
 import App from './App.tsx'
 import { BrowserRouter as Router } from 'react-router'
-import { OpenProvider } from './Context/UseOpen.tsx';
-import PeopleContextProvider from './Context/PeopleContext.tsx';
+import PeopleContextProvider from './Providers/PeopleProvider.tsx';
+import OpenProvider from './Providers/OpenStatusProvider.tsx';
 createRoot(document.getElementById('root')!).render(
   <Router>
     <ToastContainer

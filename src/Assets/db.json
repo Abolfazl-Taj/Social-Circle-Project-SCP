@@ -23,7 +23,7 @@
       ],
       "Full_Name": "Romina ",
       "Brith_Day": "20",
-      "Description": "a girl in my university looking a bit srs and like book reading adding for test and might go for further friendship ",
+      "Description": "",
       "Status": {
         "id": 3,
         "text": "Student Mate"
@@ -32,6 +32,45 @@
         "id": 1,
         "text": "Intervort",
         "icon": "/src/Assets/Img/Think.png"
+      }
+    },
+    {
+      "id": "7203",
+      "traits": [
+        "Outgoing ?",
+        "gym guy",
+        "bronze / silver tongue",
+        "Math Brain ?",
+        "diplomatic op ?"
+      ],
+      "news": [
+        {
+          "id": 1,
+          "news": "He is learning matching learning",
+          "date": "2025-06-17"
+        },
+        {
+          "id": 2,
+          "news": "he is a snap driver",
+          "date": "2025-06-17"
+        },
+        {
+          "id": 3,
+          "news": "he go to gym",
+          "date": "2025-06-17"
+        }
+      ],
+      "Full_Name": "Abolfazl (Sajad)",
+      "Brith_Day": "20",
+      "Description": "interesting case to be honest , i think this is a manipulating type because when i see him with me or other people who think is worthy he start to complementing them a lot its so sus",
+      "Status": {
+        "id": 3,
+        "text": "Student Mate"
+      },
+      "personality": {
+        "id": 2,
+        "text": "Extravert",
+        "icon": "/src/Assets/Img/Speach.png"
       }
     }
   ]

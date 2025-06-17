@@ -2,20 +2,11 @@ import { GiEvilLove, GiDevilMask, GiMuscularTorso } from "react-icons/gi";
 import { MdOutlineHandshake } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
 import { IoGameControllerOutline } from "react-icons/io5";
-import { Status } from "../../../Assets/Data/Status_Data";
 import { JSX } from "react";
 import { Link } from "react-router";
 import { FiEdit } from "react-icons/fi";
+import personType from "../../../Types/Person";
 
-export interface person {
-  id?: string;
-  Full_Name: string;
-  Brith_Day: string;
-  Description: string;
-  Status: Status;
-  personality: Status;
-  traits: string[]
-}
 
 const statusIconMap: Record<string, JSX.Element> = {
   "Student Mate": <PiStudentFill className="text-yellow-400 text-3xl transition-all hover:scale-125 hover:text-yellow-500" />,
@@ -26,11 +17,14 @@ const statusIconMap: Record<string, JSX.Element> = {
   "Game Mate": <IoGameControllerOutline className="text-purple-400 text-3xl transition-all hover:scale-125 hover:text-purple-500" />,
 };
 
-const Person = ({ id, Full_Name, Brith_Day, Description, Status, personality, traits }: person) => {
+const Person = ({ id, Full_Name, Brith_Day, Description, Status, personality, traits }: personType) => {
   const Icon = statusIconMap[Status.text] ?? null;
 
   return (
-    <div className="bg-slate-800/70 border border-slate-600 rounded-2xl p-6 shadow-lg transition-transform hover:shadow-blue-900 hover:scale-[1.02] duration-300">
+    <div className="bg-slate-800/70 border border-slate-600 rounded-2xl p-6 shadow-lg transition-transform hover:shadow-blue-900 hover:scale-[1.02] duration-300 
+    w-full md:w-1/2 lg:w-1/3 xl:w-[38%] flex flex-col gap-y-4 animate-in fade-in zoom-in
+    
+    ">
       <div className="flex items-center justify-between">
         <h2 className="text-white font-extrabold text-2xl border-b border-slate-600 pb-2">
           {Full_Name}
@@ -45,7 +39,7 @@ const Person = ({ id, Full_Name, Brith_Day, Description, Status, personality, tr
       </section>
 
       <section className="mt-4 bg-blue-700/30 rounded-xl py-2 px-4 text-center text-blue-300 font-semibold shadow-inner">
-        <p>This person Born in <span className="text-white">{new Date().getFullYear() - Brith_Day}</span> </p>
+        <p>This person Born in <span className="text-white">{new Date().getFullYear() - Number(Brith_Day)}</span> </p>
       </section>
 
       <section className="mt-4">
@@ -78,8 +72,8 @@ const Person = ({ id, Full_Name, Brith_Day, Description, Status, personality, tr
         </section>
       </section>
       <Link className="flex items-center gap-x-2 bg-slate-700 transition-all ease-in-out hover:bg-slate-800 shadow-2xl my-2 text-white font-bold  py-2 px-4 rounded-2xl" to={`edit-person/${id}`}>
-      <span>Edit {Full_Name}</span>
-      <i className="text-[18px]"><FiEdit/></i>
+        <span>Edit {Full_Name}</span>
+        <i className="text-[18px]"><FiEdit /></i>
       </Link>
     </div>
   );

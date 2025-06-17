@@ -1,5 +1,5 @@
 import { PiFileMagnifyingGlass } from "react-icons/pi"
-import { usePeople } from "../../../Context/PeopleContext"
+import { usePeople } from "../../../Hooks/usePeople"
 
 const Search
     = ({ setFilteredPeople }) => {
