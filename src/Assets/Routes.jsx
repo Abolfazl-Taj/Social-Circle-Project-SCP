@@ -1,7 +1,11 @@
-import Home from '../Pages/Home/Home'
-import AddPerson from '../Pages/AddPerson/AddPerson'
-import EditPerson from '../Pages/EditPerson/EditPerson'
-import News from '../Pages/News/News'
+import { lazy } from 'react'
+
+const Home = lazy(() => import("../Pages/Home/Home"))
+const AddPerson = lazy(() => import("../Pages/AddPerson/AddPerson"))
+const EditPerson = lazy(() => import("../Pages/EditPerson/EditPerson"))
+const News = lazy(() => import("../Pages/News/News"))
+
+
 const Routes = [
     { element: <Home />, path: "/" },
     { element: <AddPerson />, path: "/add-person" },

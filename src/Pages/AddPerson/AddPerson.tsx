@@ -40,12 +40,12 @@ const AddPerson = () => {
   );
   return (
     <Continer>
-      <div className="shadow-2xl shadow-slate-950 px-6 py-5 rounded ">
+      <div className="shadow-2xl shadow-slate-950 px-3 py-1 md:px-6 md:py-5 rounded ">
         <h1 className="font-bold border-b py-2 text-2xl">
           Add New Person To SCP
         </h1>
-        <form className="flex flex-wrap flex-col items-center justify-center my-3 w-1/2 mx-auto">
-          <div className="flex justify-between items-center  my-2 w-full">
+        <form className="flex flex-wrap flex-col items-center justify-center my-3 w-full px-4 md:px-0 md:w-1/2 mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center  my-2 w-full">
             <CreateInput
               onblur={formAction}
               className="w-full"

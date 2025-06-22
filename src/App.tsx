@@ -3,12 +3,18 @@ import { useRoutes } from 'react-router'
 import { default as path } from './Assets/Routes'
 
 import "react-toastify/dist/ReactToastify.css";
+import { Suspense } from 'react';
+import Loading from './Components/Parts/Loading';
 function App() {
   const Routes = useRoutes(path)
   return (
     <>
-    
-      {Routes}
+      <Suspense
+        fallback={<Loading />}
+
+      >
+        {Routes}
+      </Suspense>
     </>
   )
 }

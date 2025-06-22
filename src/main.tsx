@@ -6,6 +6,7 @@ import App from './App.tsx'
 import { BrowserRouter as Router } from 'react-router'
 import PeopleContextProvider from './Providers/PeopleProvider.tsx';
 import OpenProvider from './Providers/OpenStatusProvider.tsx';
+import Cursor from './Components/Parts/Cursor.tsx';
 createRoot(document.getElementById('root')!).render(
   <Router>
     <ToastContainer
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
       <OpenProvider>
         <StrictMode>
           <App />
+          <Cursor/>
         </StrictMode>
       </OpenProvider>
     </PeopleContextProvider>

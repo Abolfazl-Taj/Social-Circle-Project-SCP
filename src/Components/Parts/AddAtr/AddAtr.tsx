@@ -32,7 +32,7 @@ const AddAtr = ({ formAction }) => {
     }, [traits])
     return (
         <section className="my-6 w-full p-6 bg-slate-900 rounded-2xl shadow-2xl">
-            <h2 className="text-2xl font-bold text-slate-100 border-b border-slate-700 pb-3 mb-6">
+            <h2 className=" text-xl md:text-2xl font-bold text-slate-100 border-b border-slate-700 pb-3 mb-6">
                 Add Some Personality Traits
             </h2>
 

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-html,
+
 @font-face {
     font-family: 'Inter';
     src: url('./Assets/Fonts/Inter.ttf');
@@ -7,10 +7,16 @@ html,
 
 
 body {
-    font-family: sans-serif;
+    font-family: 'Inter';
     @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full
 }
 
 .active {
     @apply bg-slate-900 text-white py-2
+}
+.PersonShadow{
+    box-shadow: inset 1px 1px 10px 1px #000f36;
+}
+.PersonShadow:hover{
+    box-shadow: 0 10px 15px -3px #1c398e , inset 1px 1px 10px 1px #001f6e;
 }

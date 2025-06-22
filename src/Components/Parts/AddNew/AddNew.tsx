@@ -242,10 +242,14 @@ const AddNew = ({ formAction }) => {
                                         // View Mode
                                         <>
                                             {/* ID Badge */}
-                                            <div className="flex-shrink-0 flex flex-col items-center">
+                                            <div className="flex-shrink-0 flex gap-2 md:gap-0 md:flex-col items-center">
                                                 <span className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-900/40 
                                        group-hover:bg-blue-800/50 text-blue-200 font-bold text-sm transition-colors 
-                                       shadow-inner mb-1">
+                                       shadow-inner mb-1
+                                       
+                                       
+                                       
+                                       ">
                                                     #{item.id.toString().slice(-3)}
                                                 </span>
                                                 <span className="text-xs text-slate-400">
@@ -254,7 +258,7 @@ const AddNew = ({ formAction }) => {
                                             </div>
 
                                             {/* Content */}
-                                            <div className="flex-1 min-w-0">
+                                            <div className="flex-1 min-w-0 ">
                                                 <p className="text-slate-100 font-medium line-clamp-3 group-hover:line-clamp-none 
                                     transition-all duration-200">
                                                     {item.news}
@@ -263,7 +267,7 @@ const AddNew = ({ formAction }) => {
 
                                             {/* Actions */}
                                             <motion.div
-                                                className="absolute right-3 top-3 sm:top-1/2 sm:-translate-y-1/2 flex gap-2"
+                                                className="absolute right-3 bottom-1/2 translate-y-1/2 md:bottom-0 md:top-1/2 md:-translate-y-1/2 flex gap-2"
                                                 initial={{ opacity: 0, x: 10 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 whileHover={{ scale: 1.05 }}

@@ -16,7 +16,7 @@ const Home = () => {
     <Continer>
       <div className="my-4 font-bold bg-slate-800/40 border border-slate-950/40 px-5 py-10 rounded shadow flex flex-col w-full min-h-[400px] animate-in fade-in zoom-in">
         <Search setFilteredPeople={setFilteredPeople} />
-        <div className="flex gap-4 items-stretch justify-center my-2 w-full flex-wrap">
+        <div className="flex gap-4 items-stretch justify-evenly my-2 w-full flex-wrap">
           {filteredPeople.length > 0 ? (
             filteredPeople.map((person: personType) => (
               <Person key={person.id} {...person} />
