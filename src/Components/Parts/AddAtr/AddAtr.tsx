@@ -31,7 +31,7 @@ const AddAtr = ({ formAction }) => {
         })
     }, [traits])
     return (
-        <section className="my-6 w-full p-6 bg-slate-900 rounded-2xl shadow-2xl">
+        <section className="my-6 w-full p-6 bg-[#000]/40 rounded-2xl shadow-2xl">
             <h2 className=" text-xl md:text-2xl font-bold text-slate-100 border-b border-slate-700 pb-3 mb-6">
                 Add Some Personality Traits
             </h2>
@@ -90,7 +90,7 @@ const AddAtr = ({ formAction }) => {
                     <button
                         type="button"
                         onClick={() => setOpenAdd(true)}
-                        className="group flex items-center gap-2 bg-slate-700 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
+                        className="group flex items-center gap-2 bg-[#111] hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
                     >
                         <PlusIcon className="h-5 w-5 text-white transition-transform duration-300 group-hover:rotate-90" />
                         Add Trait

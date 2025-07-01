@@ -64,7 +64,7 @@ const EditPerson = () => {
     }, [editedPerson])
     return (
         <Continer>
-            <div className="max-w-2xl mx-auto bg-slate-800 rounded-xl shadow-xl overflow-hidden p-8 space-y-6 border border-slate-700 font-['Inter']">
+            <div className="max-w-2xl mx-auto bg-zinc-950 rounded-xl shadow-xl overflow-hidden p-8 space-y-6 border border-zinc-700 font-['Inter']">
                 <h1 className="text-3xl font-bold text-center text-slate-100 mb-8">Edit Profile</h1>
 
                 <div className="space-y-5">
@@ -75,7 +75,7 @@ const EditPerson = () => {
                             name="Full_Name"
                             type="text"
                             placeholder={editedPerson?.Full_Name}
-                            className="w-full px-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-600 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
                         />
                     </div>
 
@@ -86,7 +86,7 @@ const EditPerson = () => {
                             name="Brith_Day"
                             type="text"
                             placeholder={editedPerson?.Brith_Day}
-                            className="w-full px-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
+                            className="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-600 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all"
                         />
                     </div>
 
@@ -96,7 +96,7 @@ const EditPerson = () => {
                             onChange={formaction}
                             name="Description"
                             placeholder={editedPerson?.Description}
-                            className="w-full px-4 py-2 rounded-lg bg-slate-700 border border-slate-600 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all h-[100px]"
+                            className="w-full px-4 py-2 rounded-lg bg-zinc-900 border border-zinc-600 text-slate-100 placeholder-slate-400 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all h-[100px]"
                         />
                     </div>
 
@@ -119,10 +119,10 @@ const EditPerson = () => {
                             key={"Personality"}
                         />
                     </div>
-                    <div className="bg-slate-700/40 px-3 py-6 my-2 rounded-lg border border-slate-600 w-full flex flex-wrap gap-x-4 gap-y-5">
+                    <div className="bg-zinc-900/40 px-3 py-6 my-2 rounded-lg border zinc-slate-600 w-full flex flex-wrap gap-x-4 gap-y-5">
                         {editedPerson?.traits?.map((trait) => (
                             <span
-                                className="bg-slate-500/40 border border-slate-700 hover:bg-slate-500 transition-all ease-in-out text-white px-3 rounded-full py-2"
+                                className="bg-zinc-500/40 border border-slate-700 hover:bg-zinc-500 transition-all ease-in-out text-white px-3 rounded-full py-2"
                                 key={trait}
                                 onClick={() => removeTraits(trait)}
                             >
@@ -131,9 +131,9 @@ const EditPerson = () => {
                         ))}
                     </div>
                     {isadding ? (
-                        <div className="w-full flex flex-col my-4 bg-gradient-to-r from-slate-900 via-slate-900/10 to-slate-800/40 px-4 py-2 rounded-2xl shadow">
+                        <div className="w-full flex flex-col my-4 bg-gradient-to-r from-zinc-900 via-zinc-900/10 to-zinc-800/40 px-4 py-2 rounded-2xl shadow">
                             <label htmlFor="trait" className="my-2 text-lg font-bold border-b py-2 text-white border-slate-600">Add New Trait</label>
-                            <input ref={inputref} placeholder="ex : Football player , angery , ext" id="trait" type="text" name="traits" className="my-4 bg-slate-700 rounded-lg border border-slate-600 px-6 outline-none focus:border-blue-500 py-3  w-full" />
+                            <input ref={inputref} placeholder="ex : Football player , angery , ext" id="trait" type="text" name="traits" className="my-4 bg-zinc-700 rounded-lg border border-slate-600 px-6 outline-none focus:border-blue-500 py-3  w-full" />
                             <div className="w-full flex justify-around items-center my-2 font-bold py-2 px-4" >
                                 <button onClick={AddMoreTraits} className="py-2 px-4 shadow-md rounded-lg bg-green-500 text-white w-[140px]">Add</button>
                                 <button onClick={() => setIsadding(false)} className="py-2 px-4 shadow-md rounded-lg bg-red-500 text-white w-[140px]">Cancel</button>
@@ -141,14 +141,14 @@ const EditPerson = () => {
                         </div>
                     ) : (
                         <button
-                            className="px-4 py-2 bg-green-500 hover:bg-green-600 transition-all ease-in-out font-bold text-white rounded-lg mx-2"
+                            className="px-4 py-2 bg-red-600 hover:bg-red-800 transition-all ease-in-out font-bold text-white rounded-lg mx-2"
                             onClick={() => setIsadding(true)}>Add More</button>
                     )}
 
                 </div>
                 <button
                     type="button"
-                    className="w-full bg-slate-600 hover:bg-slate-500 text-white py-3 px-4 rounded-lg font-medium shadow hover:shadow-lg transition-all duration-300 border border-slate-500 hover:border-slate-400"
+                    className="w-full bg-zinc-600 hover:bg-zinc-500 text-white py-3 px-4 rounded-lg font-medium shadow hover:shadow-lg transition-all duration-300 border border-zinc-500 hover:border-zinc-400"
                     disabled={isPending}
                     onClick={editPerson}
                 >

@@ -1,6 +1,7 @@
 {
   "person": [
     {
+      "0": "dddwadadwadawdadad",
       "id": "9605",
       "traits": [
         "Book Reader",
@@ -32,9 +33,13 @@
         "id": 1,
         "text": "Intervort",
         "icon": "/src/Assets/Img/Think.png"
-      }
+      },
+      "next": [
+        "ask about what was the interesting book she recently read"
+      ]
     },
     {
+      "0": "dawdadadaw",
       "id": "7203",
       "traits": [
         "Outgoing ?",
@@ -71,7 +76,11 @@
         "id": 2,
         "text": "Extravert",
         "icon": "/src/Assets/Img/Speach.png"
-      }
+      },
+      "next": [
+        "Ask about how gym goes",
+        "ask about machine learning"
+      ]
     }
   ]
 }

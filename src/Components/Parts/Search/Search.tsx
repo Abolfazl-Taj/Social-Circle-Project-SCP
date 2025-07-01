@@ -15,7 +15,7 @@ const Search
         };
 
         return (
-            <div className="w-full  mb-4 flex justify-between items-center bg-gradient-to-l from-slate-900 via-slate-900 to-slate-800 shadow-2xl focus-within:ring-2 focus-within:ring-slate-900 py-2 px-4 rounded-full border border-slate-700 focus:border-none">
+            <div className="w-full  mb-4 flex justify-between items-center bg-gradient-to-l from-zinc-900 via-zinc-900 to-zinc-800 shadow-2xl focus-within:ring-2 focus-within:ring-zinc-900 py-2 px-4 rounded-full border border-zinc-700 focus:border-none">
                 <input onChange={SearchHandler} className="flex-grow outline-none" type="text" placeholder="Search To Find Your Right Person" />
                 <i className="text-slate-100 text-2xl border-l border-zinc-500 px-1  "><PiFileMagnifyingGlass /></i>
             </div>

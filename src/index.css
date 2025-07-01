@@ -8,15 +8,15 @@
 
 body {
     font-family: 'Inter';
-    @apply bg-gradient-to-t from-slate-950 to-slate-800 w-full
+    @apply bg-gradient-to-t from-zinc-950 to-zinc-800 w-full overflow-x-hidden
 }
 
 .active {
-    @apply bg-slate-900 text-white py-2
+    @apply bg-gradient-to-r from-[#111] to-[#000] text-white py-2
 }
 .PersonShadow{
-    box-shadow: inset 1px 1px 10px 1px #000f36;
+    box-shadow: inset 1px 1px 10px 1px #000;
 }
 .PersonShadow:hover{
-    box-shadow: 0 10px 15px -3px #1c398e , inset 1px 1px 10px 1px #001f6e;
+    box-shadow: 0 10px 15px -3px #563232 , inset 1px 1px 10px 1px #A92525;
 }

@@ -19,7 +19,6 @@ const AddPerson = () => {
       formData: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
       const { name, value } = formData.target;
-      console.log(name, value);
       return {
         ...prevdata,
         [name]: value,
@@ -40,7 +39,7 @@ const AddPerson = () => {
   );
   return (
     <Continer>
-      <div className="shadow-2xl shadow-slate-950 px-3 py-1 md:px-6 md:py-5 rounded ">
+      <div className="shadow-2xl shadow-slate-950 px-3 py-1 md:px-6 md:py-5 rounded bg-[#000]/40 ">
         <h1 className="font-bold border-b py-2 text-2xl">
           Add New Person To SCP
         </h1>
@@ -76,7 +75,7 @@ const AddPerson = () => {
             disabled={ispending}
             type="button"
             ref={AddNewPerson}
-            className="cursor-pointer bg-slate-800 px-6 py-2 rounded  shadow-2xl shadow-slate-900 hover:text-slate-50 hover:bg-slate-700 transition-all"
+            className="cursor-pointer bg-zinc-800 px-6 py-2 rounded  shadow-2xl shadow-slate-900 hover:text-slate-50 hover:bg-zinc-900 transition-all"
           >
             Add New Person
           </button>

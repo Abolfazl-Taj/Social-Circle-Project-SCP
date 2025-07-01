@@ -18,5 +18,6 @@ type personType = {
         news: string,
         date: string
     }[]
+    next?: string[]
 }
 export default personType;

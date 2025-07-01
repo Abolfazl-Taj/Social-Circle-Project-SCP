@@ -117,7 +117,7 @@ const AddNew = ({ formAction }) => {
     };
 
     return (
-        <div className="w-full bg-gradient-to-l from-slate-950/70 to-slate-950/40 px-6 py-4 rounded-xl border border-slate-800 shadow-lg my-6">
+        <div className="w-full bg-gradient-to-l from-zinc-950/70 to-zinc-950/40 px-6 py-4 rounded-xl border border-slate-800 shadow-lg my-6">
             <h2 className="text-white text-2xl border-b border-slate-800 pb-3 font-bold mb-4">
                 ✨ What's Happening?
             </h2>
@@ -174,11 +174,11 @@ const AddNew = ({ formAction }) => {
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
                         onClick={() => setIsAdding(true)}
-                        className="px-6 py-3 gap-2 rounded-full bg-gradient-to-r from-slate-700 to-slate-600 
-                      text-white hover:from-blue-600 hover:to-indigo-600 flex items-center justify-center 
+                        className="px-6 py-3 gap-2 rounded-full bg-[#111]
+                      text-white hover:bg-red-700 flex items-center justify-center 
                       font-bold my-3 transition-all duration-300 shadow-md w-full max-w-md mx-auto"
                     >
-                        <PlusIcon className="h-5 w-5 text-white transition-transform duration-300 group-hover:rotate-180" />
+                        <PlusIcon className=" h-5 w-5 text-white transition-transform duration-300 group-hover:rotate-180" />
                         Add New Update
                     </motion.button>
                 )}

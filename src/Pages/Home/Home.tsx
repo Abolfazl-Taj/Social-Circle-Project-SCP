@@ -14,7 +14,7 @@ const Home = () => {
   }, [people]);
   return (
     <Continer>
-      <div className="my-4 font-bold bg-slate-800/40 border border-slate-950/40 px-5 py-10 rounded shadow flex flex-col w-full min-h-[400px] animate-in fade-in zoom-in">
+      <div className="my-4 font-bold bg-[#000]/40 border border-zinc-950/40 px-5 py-10 rounded shadow flex flex-col w-full min-h-[400px] animate-in fade-in zoom-in">
         <Search setFilteredPeople={setFilteredPeople} />
         <div className="flex gap-4 items-stretch justify-evenly my-2 w-full flex-wrap">
           {filteredPeople.length > 0 ? (
