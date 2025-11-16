@@ -88,8 +88,8 @@ const FormModal = ({ text, data }: {
                                 Cancel
                             </button>
                         </div>
-                        <div className="self-center w-full max-h-[250px] overflow-y-auto">
-                            {curplans.map((plan, i) => <div className="flex my-1 gap-4 items-center bg-zinc-950 border border-zinc-900 px-4 py-3 w-full rounded-lg relative"> <span className="text-white bg-red-950 px-4 py-1 rounded shadow-2xl">#{i + 1}</span> <span className="text-white font-semibold">{plan}</span> <span onClick={() => removePlansHandler(plan)} className="absolute right-4 text-2xl text-red-700 bg-[#000] p-2 rounded-full"><GiTrashCan /></span></div>)}
+                        <div className="self-center w-full max-h-[250px] overflow-y-auto overflow-x-hidden">
+                            {curplans.map((plan, i) => <div className="flex my-1 gap-4 items-center bg-zinc-950 border border-zinc-900 px-4 py-3 w-full rounded-lg relative hover:shadow-2xl hover:scale-105"> <span className="text-white bg-red-950 px-4 py-1 rounded shadow-2xl">#{i + 1}</span> <span className="text-white font-semibold">{plan}</span> <span onClick={() => removePlansHandler(plan)} className="absolute bottom-3 right-2 text-2xl text-red-700"><GiTrashCan /></span></div>)}
                         </div>
                         <button  type="button" onClick={updateHandler} className="bg-green-600 w-[40%] self-center py-2 px-4 rounded-md text-white hover:bg-green-700 transition-all duration-200 ease-in-out">Submit</button>
                     </div>

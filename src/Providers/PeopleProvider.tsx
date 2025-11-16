@@ -19,4 +19,4 @@ const PeopleContextProvider = ({ children }: {
 
     )
 }
-export default PeopleContextProvider
+export default PeopleContextProvider    
